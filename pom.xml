@@ -92,6 +92,12 @@
             <version>20200518</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.sciss</groupId>
+            <artifactId>ws4j</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
 
     </dependencies>
 
