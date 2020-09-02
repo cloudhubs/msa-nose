@@ -46,14 +46,18 @@ public class EntityService {
         Set<String> entities = new HashSet<>();
 
         String basePath = request.getPathToCompiledMicroservices();
-        if(!basePath.endsWith("\\")){
-            basePath = basePath.concat("\\");
+
+        // convert windows path to linux style
+        basePath = basePath.replace("\\\\", "/");
+
+        if(!basePath.endsWith("/")){
+            basePath = basePath.concat("/");
         }
 
         String remainder = path.substring(basePath.length());
-        String folder = remainder.substring(0, remainder.indexOf('\\'));
+        String folder = remainder.substring(0, remainder.indexOf('/'));
 
-        String newPath = basePath.concat(folder).concat("\\");
+        String newPath = basePath.concat(folder).concat("/");
 
         AnalysisContext analysisContext = JParserService.createContextFromPath(newPath);
         List<ClassComponent> classes = analysisContext.getClasses();
