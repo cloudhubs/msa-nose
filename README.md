@@ -18,6 +18,9 @@ There are a couple prerequisites to cover before running.
 ```
  mvn install:install-file -Dfile=<path-to-jar> -DgroupId=com.sciss -DartifactId=ws4j -Dversion=1.0.1 -Dpackaging=jar 
 ```
+#### Lombok
+
+MSANose uses [Lombok](https://projectlombok.org/) for generating getters/setters. If your IDE is not configured for annotation processing then you might see the IDE reporting errors on getters/setters such as "method not found". The application should still run successfully, but you will need to follow the directions for your IDE to install the necessary plugins/annotation processor to get rid of the errors.
 
 ## Endpoints
 
