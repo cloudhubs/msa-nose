@@ -34,7 +34,7 @@ This endpoint will run all of the other endpoints and aggregate them into a sing
 
 This endpoint will find all of the unversioned APIs and report them as a list.
 
-### /api/v1/apis 
+### /api/v1/sharedLibraries 
 
 This endpoint will find all of the shared libraries and report them as a list.
 
@@ -81,6 +81,8 @@ Each of the endpoints is called using a POST operation with the body as follows:
     "outputPath": ""
 }
 ```
+
+\* At the moment `outputPath` is a WIP.
 
 ## Authors
 
